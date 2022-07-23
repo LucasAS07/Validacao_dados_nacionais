@@ -1,16 +1,9 @@
-#from cpf_cnpj import Documento
-import re
-from telefones import TelefonesBr
-from datas_br import DataBr
-from datetime import datetime
+from acesso_cep import BuscaEndereco
 
-
-#cadastro = DataBr()
-# print(cadastro)
-
-hoje = DataBr()
-print(hoje.tempo_cadastro())
-
+cep = 37925000
+obj = BuscaEndereco(cep)
+bairro, cidade, uf = obj.acessa_via_cep()
+print(f'Bairro: {bairro}, Cidade: {cidade}, UF: {uf}')
 
 """def validacao_docs(numero_documento):
     doc = numero_documento
