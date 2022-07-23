@@ -1,10 +1,16 @@
 #from cpf_cnpj import Documento
 import re
 from telefones import TelefonesBr
+from datas_br import DataBr
+from datetime import datetime
 
-tel = '553798026179'
-telefone_objeto = TelefonesBr(tel)
-print(telefone_objeto)
+
+#cadastro = DataBr()
+# print(cadastro)
+
+hoje = DataBr()
+print(hoje.tempo_cadastro())
+
 
 """def validacao_docs(numero_documento):
     doc = numero_documento
